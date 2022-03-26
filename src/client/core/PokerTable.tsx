@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import useSocket from '../hooks/useSocket';
 import ProfileContext from '../contexts/ProfileContext';
-import { SocketEvent } from '../../commons/socket-event.enum';
+import { SocketEvent } from '../../commons/enums/socket-event.enum';
 import { User } from '../../commons/models/user.model';
 
 const fibonacci = ['0', '1', '2', '3', '5', '8', '13', '21', '34', '?'];

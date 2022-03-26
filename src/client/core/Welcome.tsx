@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import useSocket from '../hooks/useSocket';
 import { useFormik } from 'formik';
-import { SocketEvent } from '../../commons/socket-event.enum';
+import { SocketEvent } from '../../commons/enums/socket-event.enum';
 import { useNavigate } from 'react-router-dom';
 import ProfileContext from '../contexts/ProfileContext';
 
