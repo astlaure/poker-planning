@@ -1,0 +1,42 @@
+.container .row {
+  margin: 0 -1rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+
+  &.justify-center {
+    justify-content: center;
+  }
+
+  .column {
+    width: 100%;
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+
+    &.small-4 {
+      @media (min-width: 46em) {
+        width: calc(100% / 12 * 4);
+      }
+    }
+
+    &.medium-1 {
+      @media (min-width: 64em) {
+        width: calc(100% / 12 * 1);
+      }
+    }
+
+    &.medium-2 {
+      @media (min-width: 64em) {
+        width: calc(100% / 12 * 2);
+      }
+    }
+
+    &.medium-6 {
+      @media (min-width: 64em) {
+        width: calc(100% / 12 * 6);
+      }
+    }
+  }
+}

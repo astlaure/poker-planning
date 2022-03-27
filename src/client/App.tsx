@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Welcome from './core/Welcome';
-import PokerTable from './core/PokerTable';
-import ProfileContextProvider from './contexts/ProfileContextProvider';
+import Welcome from './app/core/Welcome';
+import PokerTable from './app/core/PokerTable';
+import ProfileContextProvider from './app/contexts/ProfileContextProvider';
 
 export default function App(): React.ReactElement {
   return (

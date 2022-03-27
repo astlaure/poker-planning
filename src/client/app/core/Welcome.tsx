@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import useSocket from '../hooks/useSocket';
 import { useFormik } from 'formik';
-import { SocketEvent } from '../../commons/enums/socket-event.enum';
+import { SocketEvent } from '../../../commons/enums/socket-event.enum';
 import { useNavigate } from 'react-router-dom';
 import ProfileContext from '../contexts/ProfileContext';
 
@@ -32,25 +32,26 @@ function Welcome(): React.ReactElement {
   }
 
   return (
-    <div>
-      <h1>Welcome</h1>
-      <div>
-        <button onClick={handleClick}>Create Planning</button>
-        <p>{state}</p>
-      </div>
-      <div>
-
-        <form action="#" onSubmit={handleSubmit}>
-          <label htmlFor="planning">
-            Planning
-            <input type="text" name="planning" id="planning" value={values.planning} onChange={handleChange} />
-          </label>
-          <label htmlFor="displayName">
-            Display Name
-            <input type="text" name="displayName" id="displayName" value={values.displayName} onChange={handleChange} />
-          </label>
-          <button type="submit">Join Planning</button>
-        </form>
+    <div className="container welcome-page">
+      <div className="row">
+        <div className="column medium-6">
+          <h1>Poker Planning</h1>
+          <div>
+            <button onClick={handleClick}>Create Planning</button>
+            <p className="room-code">{state}</p>
+          </div>
+          <form action="#" onSubmit={handleSubmit}>
+            <label htmlFor="planning" className="input">
+              Planning
+              <input type="text" name="planning" id="planning" value={values.planning} onChange={handleChange} />
+            </label>
+            <label htmlFor="displayName" className="input">
+              Display Name
+              <input type="text" name="displayName" id="displayName" value={values.displayName} onChange={handleChange} />
+            </label>
+            <button type="submit">Join Planning</button>
+          </form>
+        </div>
       </div>
     </div>
   );
